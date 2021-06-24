@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="/static/CSS/style.css">
+      <script type="text/javascript" src="/static/js/d3/d3.js"></script>
+      <script src="//d3js.org/d3-scale-chromatic.v0.3.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
+    <title>Dashboard</title>
+
+  </head>
+  <body>
+
+  
+
+  <br>
+  <br>
+
+  {% block body %}
+
+ <div class="row">
+  <h2><i>Perceived emotions</i></h2>
+   <br>
+   <br>
+
+  <div  align="center">
+    <h3>Facial Emotions</h3>
+      <br>
+        <p>Your most frequent emotions and visible trait from video, voice and text are : </p>
+        <br>
+        <h4>{{emo_from_both}} , {{trait}}</h4>
+        <h4>{{statement}}</h4>
+        <div class="parent">
+          <ul align="left">
+            {% for key, value in emotions.items() %}
+            <li>{{key}} : {{value}}%</li>
+            {% endfor %}
+          </ul>
+        </div>
+      <br>
+    <br>
+    </div>
+  </div>
+
+
+  <br>
+
+  <script type="text/javascript" src="static/js/hist_vid_perso.js"></script>
+  <script type="text/javascript" src="static/js/hist_vid_glob.js"></script>
+
+
+
+  <form>
+    <input type="button" value="Back" onclick="history.go(-1)">
+  </form>
+
+
+  {% endblock %}
+
+</body>
+</html>
