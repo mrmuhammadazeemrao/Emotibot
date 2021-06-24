@@ -88,7 +88,6 @@ prompt-toolkit==3.0.8
 protobuf==3.13.0
 pyasn1==0.4.8
 pyasn1-modules==0.2.8
-PyAudio @ file:///C:/Users/rao/pipwin/PyAudio-0.2.11-cp37-cp37m-win_amd64.whl
 pycparser==2.20
 pydub==0.24.1
 Pygments==2.7.2
